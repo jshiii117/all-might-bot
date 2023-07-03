@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require("discord.js");
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v9");
 const axios = require("axios");
-import { riotKey } from "../../config.json";
+const { riotKey } = require("../../config.json");
 
 const data = new SlashCommandBuilder()
   .setName("initialize")
@@ -34,7 +34,7 @@ async function execute(interaction) {
       )}/${encodeURIComponent(tagline)}`,
       {
         headers: {
-          "X-Riot-Token": { riotKey },
+          "X-Riot-Token": "RGAPI-45e9a4f3-ee6b-45ee-ab12-4a1da0b48907",
         },
       }
     );
